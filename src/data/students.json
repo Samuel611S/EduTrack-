@@ -1,0 +1,42 @@
+[
+  {
+    "id": "s1",
+    "studentId": "STU-1001",
+    "name": "Jordan Lee",
+    "email": "jordan.lee@university.edu",
+    "gpa": 3.72,
+    "enrolledCourseIds": ["c1", "c2", "c4"]
+  },
+  {
+    "id": "s2",
+    "studentId": "STU-1002",
+    "name": "Priya Patel",
+    "email": "priya.patel@university.edu",
+    "gpa": 3.91,
+    "enrolledCourseIds": ["c1", "c3"]
+  },
+  {
+    "id": "s3",
+    "studentId": "STU-1003",
+    "name": "Marcus Chen",
+    "email": "marcus.chen@university.edu",
+    "gpa": 3.45,
+    "enrolledCourseIds": ["c2", "c3", "c4"]
+  },
+  {
+    "id": "s4",
+    "studentId": "STU-1004",
+    "name": "Elena Rossi",
+    "email": "elena.rossi@university.edu",
+    "gpa": 3.88,
+    "enrolledCourseIds": ["c1", "c2"]
+  },
+  {
+    "id": "s5",
+    "studentId": "STU-1005",
+    "name": "Devon Wright",
+    "email": "devon.wright@university.edu",
+    "gpa": 3.21,
+    "enrolledCourseIds": ["c3", "c4"]
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "id": "t1",
+    "name": "Dr. Sarah Mitchell",
+    "email": "s.mitchell@university.edu",
+    "department": "Computer Science"
+  },
+  {
+    "id": "t2",
+    "name": "Prof. James Okonkwo",
+    "email": "j.okonkwo@university.edu",
+    "department": "Mathematics"
+  },
+  {
+    "id": "t3",
+    "name": "Dr. Emily Carter",
+    "email": "e.carter@university.edu",
+    "department": "Physics"
+  }
+]

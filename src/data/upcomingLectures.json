@@ -1,0 +1,23 @@
+[
+  {
+    "id": "u1",
+    "courseId": "c1",
+    "title": "Graph algorithms workshop",
+    "when": "2025-03-24T10:00:00",
+    "room": "Hall A-12"
+  },
+  {
+    "id": "u2",
+    "courseId": "c2",
+    "title": "Sprint review & demos",
+    "when": "2025-03-24T14:00:00",
+    "room": "Lab B-04"
+  },
+  {
+    "id": "u3",
+    "courseId": "c3",
+    "title": "Eigenvalues problem set",
+    "when": "2025-03-25T09:30:00",
+    "room": "Math 204"
+  }
+]

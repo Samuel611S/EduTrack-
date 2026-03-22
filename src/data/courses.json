@@ -1,0 +1,42 @@
+[
+  {
+    "id": "c1",
+    "courseCode": "CS-301",
+    "name": "Data Structures & Algorithms",
+    "semester": "Spring 2025",
+    "teacherId": "t1",
+    "enrolledStudentIds": ["s1", "s2", "s4"],
+    "averageAttendance": 92,
+    "currentGradeByStudent": { "s1": "A-", "s2": "A", "s4": "B+" }
+  },
+  {
+    "id": "c2",
+    "courseCode": "CS-240",
+    "name": "Software Engineering",
+    "semester": "Spring 2025",
+    "teacherId": "t1",
+    "enrolledStudentIds": ["s1", "s3", "s4"],
+    "averageAttendance": 88,
+    "currentGradeByStudent": { "s1": "B+", "s3": "A-", "s4": "B" }
+  },
+  {
+    "id": "c3",
+    "courseCode": "MATH-310",
+    "name": "Linear Algebra",
+    "semester": "Spring 2025",
+    "teacherId": "t2",
+    "enrolledStudentIds": ["s2", "s3", "s5"],
+    "averageAttendance": 85,
+    "currentGradeByStudent": { "s2": "A", "s3": "B+", "s5": "B-" }
+  },
+  {
+    "id": "c4",
+    "courseCode": "PHYS-220",
+    "name": "Modern Physics",
+    "semester": "Spring 2025",
+    "teacherId": "t3",
+    "enrolledStudentIds": ["s1", "s3", "s5"],
+    "averageAttendance": 79,
+    "currentGradeByStudent": { "s1": "B", "s3": "A-", "s5": "C+" }
+  }
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "id": "l1",
+    "message": "Student registered — Jordan Lee",
+    "type": "registration",
+    "at": "2025-03-21T09:12:00"
+  },
+  {
+    "id": "l2",
+    "message": "Attendance marked — CS-301 (Mar 17)",
+    "type": "attendance",
+    "at": "2025-03-21T10:05:00"
+  },
+  {
+    "id": "l3",
+    "message": "Course created — Modern Physics (PHYS-220)",
+    "type": "course",
+    "at": "2025-03-20T14:22:00"
+  },
+  {
+    "id": "l4",
+    "message": "System settings updated — notification preferences",
+    "type": "settings",
+    "at": "2025-03-19T16:40:00"
+  },
+  {
+    "id": "l5",
+    "message": "Teacher added — Dr. Emily Carter",
+    "type": "staff",
+    "at": "2025-03-18T11:03:00"
+  }
+]
