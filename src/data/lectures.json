@@ -1,0 +1,35 @@
+[
+  {
+    "id": "lec1",
+    "courseId": "c1",
+    "title": "Graph algorithms workshop",
+    "locationLabel": "Hall A-12 — Main Campus",
+    "latitude": 40.712776,
+    "longitude": -74.005974,
+    "allowedRadiusMeters": null,
+    "startsAt": "2025-03-17T15:00:00.000Z",
+    "endsAt": "2025-03-17T16:30:00.000Z"
+  },
+  {
+    "id": "lec2",
+    "courseId": "c2",
+    "title": "Sprint review & demos",
+    "locationLabel": "Lab B-04",
+    "latitude": 40.7132,
+    "longitude": -74.0065,
+    "allowedRadiusMeters": 120,
+    "startsAt": "2025-03-18T18:00:00.000Z",
+    "endsAt": "2025-03-18T19:30:00.000Z"
+  },
+  {
+    "id": "lec3",
+    "courseId": "c4",
+    "title": "Quantum lab orientation",
+    "locationLabel": "Physics Building — Room 110",
+    "latitude": 40.714,
+    "longitude": -74.0045,
+    "allowedRadiusMeters": null,
+    "startsAt": "2025-03-20T14:00:00.000Z",
+    "endsAt": "2025-03-20T15:00:00.000Z"
+  }
+]

@@ -1,0 +1,35 @@
+[
+  {
+    "attendance_id": "att-001",
+    "student_id": "s1",
+    "course_id": "c1",
+    "lecture_id": "lec1",
+    "timestamp": "2025-03-17T15:08:22.000Z",
+    "student_latitude": 40.71285,
+    "student_longitude": -74.0061,
+    "status": "Present",
+    "recorded_by": "student"
+  },
+  {
+    "attendance_id": "att-002",
+    "student_id": "s1",
+    "course_id": "c2",
+    "lecture_id": "lec2",
+    "timestamp": "2025-03-18T18:12:05.000Z",
+    "student_latitude": 40.71325,
+    "student_longitude": -74.00645,
+    "status": "Present",
+    "recorded_by": "student"
+  },
+  {
+    "attendance_id": "att-003",
+    "student_id": "s2",
+    "course_id": "c1",
+    "lecture_id": "lec1",
+    "timestamp": "2025-03-17T15:05:00.000Z",
+    "student_latitude": 40.7128,
+    "student_longitude": -74.006,
+    "status": "Present",
+    "recorded_by": "student"
+  }
+]

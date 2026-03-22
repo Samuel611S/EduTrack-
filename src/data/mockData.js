@@ -1,18 +1,16 @@
 import studentsData from "./students.json";
 import teachersData from "./teachers.json";
 import coursesData from "./courses.json";
-import attendanceLogsData from "./attendanceLogs.json";
 import activityLogsData from "./activityLogs.json";
-import upcomingLecturesData from "./upcomingLectures.json";
 import attendanceTrendData from "./attendanceTrend.json";
 
 export const students = studentsData;
 export const teachers = teachersData;
 export const courses = coursesData;
-export const attendanceLogs = attendanceLogsData;
 export const activityLogs = activityLogsData;
-export const upcomingLectures = upcomingLecturesData;
 export const attendanceTrend = attendanceTrendData;
+
+export { getAllLectures, getLectureById } from "./lecturesMerged.js";
 
 export function getTeacherById(id) {
   return teachers.find((t) => t.id === id);

@@ -12,10 +12,12 @@ function MobileNav({ role, onClose }) {
           ["/admin/teachers", "Teachers"],
           ["/admin/courses", "Courses"],
           ["/admin/reports", "Reports"],
+          ["/admin/settings", "Settings"],
         ]
       : role === "teacher"
         ? [
             ["/teacher/dashboard", "Dashboard"],
+            ["/teacher/lectures", "Lectures"],
             ["/teacher/attendance", "Attendance"],
             ["/teacher/reports", "Reports"],
           ]

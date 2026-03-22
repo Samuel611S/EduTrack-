@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import DashboardLayout from "../../components/DashboardLayout.jsx";
 import StatsCard from "../../components/StatsCard.jsx";
 import CourseCard from "../../components/CourseCard.jsx";
@@ -18,19 +19,29 @@ export default function TeacherDashboard() {
     <DashboardLayout
       role="teacher"
       title="Teacher dashboard"
-      subtitle="Your courses and attendance snapshot"
+      subtitle="Courses, lectures, and attendance (GPS + teacher marks)"
     >
       <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <div>
           <h2 className="text-sm font-semibold text-slate-900">My courses</h2>
-          <p className="text-xs text-slate-500">Spring 2025 · Demo instructor (CS)</p>
+          <p className="text-xs text-slate-500">
+            Spring 2025 · Mark or edit attendance under Attendance or each course page.
+          </p>
         </div>
-        <button
-          type="button"
-          className="inline-flex items-center justify-center rounded-lg bg-slate-900 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-slate-800"
-        >
-          + Add Course
-        </button>
+        <div className="flex flex-wrap gap-2">
+          <Link
+            to="/teacher/lectures"
+            className="inline-flex items-center justify-center rounded-lg border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-800 shadow-sm hover:bg-slate-50"
+          >
+            Manage lectures
+          </Link>
+          <button
+            type="button"
+            className="inline-flex items-center justify-center rounded-lg bg-slate-900 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-slate-800"
+          >
+            + Add Course
+          </button>
+        </div>
       </div>
 
       <div className="mt-6 grid gap-4 sm:grid-cols-3">

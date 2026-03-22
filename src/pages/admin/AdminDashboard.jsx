@@ -34,8 +34,18 @@ const modules = [
     desc: "Sections, schedules, and capacity planning.",
     icon: "▣",
   },
-  { to: "#", title: "Location Settings", desc: "Campus venues and room mappings.", icon: "⌖" },
-  { to: "#", title: "System Settings", desc: "Integrations, roles, and policies.", icon: "⚙" },
+  {
+    to: "/admin/settings",
+    title: "Attendance radius",
+    desc: "Default GPS check-in distance for all lectures.",
+    icon: "⌖",
+  },
+  {
+    to: "/admin/settings",
+    title: "System settings",
+    desc: "Attendance rules and campus defaults.",
+    icon: "⚙",
+  },
 ];
 
 export default function AdminDashboard() {

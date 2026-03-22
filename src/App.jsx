@@ -7,7 +7,9 @@ import AdminStudents from "./pages/admin/AdminStudents.jsx";
 import AdminTeachers from "./pages/admin/AdminTeachers.jsx";
 import AdminCourses from "./pages/admin/AdminCourses.jsx";
 import AdminReports from "./pages/admin/AdminReports.jsx";
+import AdminSettings from "./pages/admin/AdminSettings.jsx";
 import TeacherDashboard from "./pages/teacher/TeacherDashboard.jsx";
+import TeacherLectures from "./pages/teacher/TeacherLectures.jsx";
 import TeacherCourseDetail from "./pages/teacher/TeacherCourseDetail.jsx";
 import TeacherAttendance from "./pages/teacher/TeacherAttendance.jsx";
 import TeacherReports from "./pages/teacher/TeacherReports.jsx";
@@ -71,6 +73,14 @@ export default function App() {
           </ProtectedRoute>
         }
       />
+      <Route
+        path="/admin/settings"
+        element={
+          <ProtectedRoute role="admin">
+            <AdminSettings />
+          </ProtectedRoute>
+        }
+      />
 
       <Route
         path="/teacher/dashboard"
@@ -85,6 +95,14 @@ export default function App() {
         element={
           <ProtectedRoute role="teacher">
             <TeacherCourseDetail />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/teacher/lectures"
+        element={
+          <ProtectedRoute role="teacher">
+            <TeacherLectures />
           </ProtectedRoute>
         }
       />

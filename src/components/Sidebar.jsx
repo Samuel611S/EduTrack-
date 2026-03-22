@@ -27,10 +27,12 @@ const adminNav = [
   { to: "/admin/teachers", icon: "◇", label: "Teachers" },
   { to: "/admin/courses", icon: "▣", label: "Courses" },
   { to: "/admin/reports", icon: "▤", label: "Reports" },
+  { to: "/admin/settings", icon: "⚙", label: "Settings" },
 ];
 
 const teacherNav = [
   { to: "/teacher/dashboard", icon: "◆", label: "Dashboard" },
+  { to: "/teacher/lectures", icon: "⌖", label: "Lectures" },
   { to: "/teacher/attendance", icon: "✓", label: "Attendance" },
   { to: "/teacher/reports", icon: "▤", label: "Reports" },
 ];
