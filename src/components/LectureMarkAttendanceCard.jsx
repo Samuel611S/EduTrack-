@@ -86,14 +86,16 @@ export default function LectureMarkAttendanceCard({ lecture, course, studentId }
   }
 
   return (
-    <div className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
+    <div className="lms-panel border-l-4 border-l-teal-600 p-5">
       <div className="flex flex-col gap-1 sm:flex-row sm:items-start sm:justify-between">
         <div>
-          <h3 className="text-sm font-semibold text-slate-900">{lecture.title}</h3>
-          <p className="text-xs text-slate-500">{course.courseCode} · {course.name}</p>
+          <h3 className="font-serif text-base font-semibold text-lms-navy">{lecture.title}</h3>
+          <p className="text-xs text-slate-500">
+            {course.courseCode} · {course.name}
+          </p>
         </div>
         {lecture.isDemoAnchor && (
-          <span className="mt-1 text-[10px] font-medium uppercase text-sky-700 sm:mt-0">
+          <span className="mt-1 rounded bg-teal-50 px-2 py-0.5 text-[10px] font-bold uppercase text-lms-accent sm:mt-0">
             Demo window
           </span>
         )}
@@ -131,7 +133,7 @@ export default function LectureMarkAttendanceCard({ lecture, course, studentId }
         type="button"
         disabled={!canAttempt || loading}
         onClick={handleMark}
-        className="mt-4 w-full rounded-lg bg-slate-900 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-slate-800 disabled:cursor-not-allowed disabled:bg-slate-300"
+        className="mt-4 w-full rounded-lg bg-lms-navy py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-lms-navy-light disabled:cursor-not-allowed disabled:bg-slate-300"
       >
         {loading ? "Getting location…" : "Mark Attendance"}
       </button>

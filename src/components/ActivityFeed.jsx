@@ -22,12 +22,12 @@ const typeDot = {
 
 export default function ActivityFeed({ items }) {
   return (
-    <div className="rounded-xl border border-slate-200 bg-white shadow-sm">
-      <div className="border-b border-slate-100 px-4 py-3">
-        <h2 className="text-sm font-semibold text-slate-900">Recent Activity</h2>
-        <p className="text-xs text-slate-500">Latest changes across the platform</p>
+    <div className="lms-panel overflow-hidden">
+      <div className="lms-panel-header">
+        <h2 className="font-serif text-sm font-semibold text-lms-navy">Recent activity</h2>
+        <p className="text-xs text-slate-500">Audit-style feed (mock)</p>
       </div>
-      <ul className="divide-y divide-slate-100">
+      <ul className="divide-y divide-lms-border">
         {items.map((item) => (
           <li key={item.id} className="flex gap-3 px-4 py-3">
             <span

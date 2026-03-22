@@ -83,9 +83,9 @@ export default function TeacherAttendancePanel({ courseId: lockedCourseId, teach
 
   return (
     <div className="space-y-6">
-      <div className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm sm:p-6">
-        <h2 className="text-sm font-semibold text-slate-900">Mark or update attendance</h2>
-        <p className="mt-1 text-xs text-slate-500">
+      <div className="lms-panel p-4 sm:p-6">
+        <h2 className="font-serif text-base font-semibold text-lms-navy">Mark or update attendance</h2>
+        <p className="mt-1 text-xs text-slate-600">
           Record <strong>Present</strong> or <strong>Absent</strong> for any enrolled student and
           scheduled lecture. One row per student per lecture — this merges with student GPS
           check-ins.
@@ -94,7 +94,7 @@ export default function TeacherAttendancePanel({ courseId: lockedCourseId, teach
           <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
             {!lockedCourseId && (
               <div>
-                <label className="block text-xs font-medium text-slate-700">Course</label>
+                <label className="block text-xs font-semibold text-lms-navy">Course</label>
                 <select
                   value={selectedCourseId}
                   onChange={(e) => {
@@ -102,7 +102,7 @@ export default function TeacherAttendancePanel({ courseId: lockedCourseId, teach
                     setLectureId("");
                     setStudentId("");
                   }}
-                  className="mt-1 w-full rounded-lg border border-slate-200 px-3 py-2 text-sm"
+                  className="mt-1 w-full rounded-lg border border-lms-border bg-white px-3 py-2 text-sm"
                 >
                   {teacherCourses.map((c) => (
                     <option key={c.id} value={c.id}>
@@ -113,11 +113,11 @@ export default function TeacherAttendancePanel({ courseId: lockedCourseId, teach
               </div>
             )}
             <div>
-              <label className="block text-xs font-medium text-slate-700">Lecture</label>
+              <label className="block text-xs font-semibold text-lms-navy">Lecture</label>
               <select
                 value={lectureId}
                 onChange={(e) => setLectureId(e.target.value)}
-                className="mt-1 w-full rounded-lg border border-slate-200 px-3 py-2 text-sm"
+                className="mt-1 w-full rounded-lg border border-lms-border bg-white px-3 py-2 text-sm"
                 required
               >
                 <option value="">Select lecture</option>
@@ -129,11 +129,11 @@ export default function TeacherAttendancePanel({ courseId: lockedCourseId, teach
               </select>
             </div>
             <div>
-              <label className="block text-xs font-medium text-slate-700">Student</label>
+              <label className="block text-xs font-semibold text-lms-navy">Student</label>
               <select
                 value={studentId}
                 onChange={(e) => setStudentId(e.target.value)}
-                className="mt-1 w-full rounded-lg border border-slate-200 px-3 py-2 text-sm"
+                className="mt-1 w-full rounded-lg border border-lms-border bg-white px-3 py-2 text-sm"
                 required
               >
                 <option value="">Select student</option>
@@ -145,11 +145,11 @@ export default function TeacherAttendancePanel({ courseId: lockedCourseId, teach
               </select>
             </div>
             <div>
-              <label className="block text-xs font-medium text-slate-700">Status</label>
+              <label className="block text-xs font-semibold text-lms-navy">Status</label>
               <select
                 value={status}
                 onChange={(e) => setStatus(e.target.value)}
-                className="mt-1 w-full rounded-lg border border-slate-200 px-3 py-2 text-sm"
+                className="mt-1 w-full rounded-lg border border-lms-border bg-white px-3 py-2 text-sm"
               >
                 <option value="Present">Present</option>
                 <option value="Absent">Absent</option>
@@ -159,7 +159,7 @@ export default function TeacherAttendancePanel({ courseId: lockedCourseId, teach
           <div>
             <button
               type="submit"
-              className="rounded-lg bg-slate-900 px-5 py-2.5 text-sm font-semibold text-white hover:bg-slate-800"
+              className="rounded-lg bg-lms-navy px-5 py-2.5 text-sm font-semibold text-white hover:bg-lms-navy-light"
             >
               Save attendance
             </button>
@@ -168,15 +168,16 @@ export default function TeacherAttendancePanel({ courseId: lockedCourseId, teach
         {formMsg && <p className="mt-3 text-sm font-medium text-emerald-800">{formMsg}</p>}
       </div>
 
-      <div className="overflow-x-auto rounded-xl border border-slate-200 bg-white shadow-sm">
-        <div className="border-b border-slate-100 px-4 py-3">
-          <h2 className="text-sm font-semibold text-slate-900">Attendance records</h2>
+      <div className="lms-panel overflow-hidden">
+        <div className="lms-panel-header">
+          <h2 className="font-serif text-sm font-semibold text-lms-navy">Attendance records</h2>
           <p className="text-xs text-slate-500">
             Use the status dropdown to edit. Teacher updates are labeled in Source.
           </p>
         </div>
+        <div className="overflow-x-auto">
         <table className="min-w-full text-left text-sm">
-          <thead className="border-b border-slate-200 bg-slate-50 text-xs font-semibold uppercase text-slate-600">
+          <thead className="border-b border-lms-border bg-lms-canvas/80 text-xs font-semibold uppercase text-slate-600">
             <tr>
               <th className="whitespace-nowrap px-4 py-3">Student</th>
               {!lockedCourseId && (
@@ -189,7 +190,7 @@ export default function TeacherAttendancePanel({ courseId: lockedCourseId, teach
               <th className="whitespace-nowrap px-4 py-3">Status</th>
             </tr>
           </thead>
-          <tbody className="divide-y divide-slate-100">
+          <tbody className="divide-y divide-lms-border">
             {tableRows.length === 0 ? (
               <tr>
                 <td colSpan={colCount} className="px-4 py-6 text-center text-slate-500">
@@ -219,7 +220,7 @@ export default function TeacherAttendancePanel({ courseId: lockedCourseId, teach
                     <select
                       value={row.status}
                       onChange={(e) => handleRowStatusChange(row, e.target.value)}
-                      className="rounded-lg border border-slate-200 bg-white px-2 py-1 text-xs font-medium"
+                      className="rounded-lg border border-lms-border bg-white px-2 py-1 text-xs font-medium"
                     >
                       <option value="Present">Present</option>
                       <option value="Absent">Absent</option>
@@ -230,6 +231,7 @@ export default function TeacherAttendancePanel({ courseId: lockedCourseId, teach
             )}
           </tbody>
         </table>
+        </div>
       </div>
     </div>
   );

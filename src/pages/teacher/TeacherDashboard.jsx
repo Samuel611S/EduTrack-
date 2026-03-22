@@ -18,8 +18,12 @@ export default function TeacherDashboard() {
   return (
     <DashboardLayout
       role="teacher"
-      title="Teacher dashboard"
-      subtitle="Courses, lectures, and attendance (GPS + teacher marks)"
+      title="Instructor course home"
+      subtitle="Teaching spaces, lecture geofences, and attendance records"
+      breadcrumbs={[
+        { label: "Teaching", to: "/teacher/dashboard" },
+        { label: "Courses" },
+      ]}
     >
       <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <div>

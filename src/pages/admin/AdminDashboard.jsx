@@ -56,8 +56,12 @@ export default function AdminDashboard() {
   return (
     <DashboardLayout
       role="admin"
-      title="EduTrack+ Admin"
-      subtitle="Overview and quick actions"
+      title="Institution overview"
+      subtitle="Campus-wide metrics, GPS attendance policy, and user management (prototype)"
+      breadcrumbs={[
+        { label: "Admin", to: "/admin/dashboard" },
+        { label: "Overview" },
+      ]}
     >
       <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
         <StatsCard label="Total Students" value={students.length} icon="◎" />
@@ -73,20 +77,23 @@ export default function AdminDashboard() {
 
       <div className="mt-8 grid gap-6 lg:grid-cols-3">
         <div className="lg:col-span-2">
-          <h2 className="text-sm font-semibold text-slate-900">Management modules</h2>
+          <h2 className="font-serif text-lg font-semibold text-lms-navy">Management modules</h2>
+          <p className="mt-1 text-xs text-slate-500">
+            Wireframe zones mapped to routes — click through to explore each area.
+          </p>
           <div className="mt-3 grid gap-3 sm:grid-cols-2">
             {modules.map((m) => (
               <Link
                 key={m.title}
                 to={m.to}
-                className="group rounded-xl border border-slate-200 bg-white p-4 shadow-sm transition hover:border-slate-300 hover:shadow-md"
+                className="group lms-panel p-4 transition hover:border-lms-accent/40 hover:shadow-md"
               >
                 <div className="flex items-start gap-3">
-                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-slate-100 text-lg text-slate-700 group-hover:bg-slate-900 group-hover:text-white">
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-teal-50 text-lg text-lms-navy group-hover:bg-lms-navy group-hover:text-white">
                     {m.icon}
                   </span>
                   <div>
-                    <h3 className="text-sm font-semibold text-slate-900">{m.title}</h3>
+                    <h3 className="text-sm font-semibold text-lms-navy">{m.title}</h3>
                     <p className="mt-1 text-xs text-slate-600">{m.desc}</p>
                   </div>
                 </div>

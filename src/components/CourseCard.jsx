@@ -12,12 +12,10 @@ export default function CourseCard({
 }) {
   if (variant === "teacher") {
     return (
-      <div className="flex flex-col rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
+      <div className="lms-panel flex flex-col p-5 transition hover:shadow-md">
         <div className="flex flex-1 flex-col gap-1">
-          <p className="text-xs font-medium uppercase tracking-wide text-slate-500">
-            {course.courseCode}
-          </p>
-          <h3 className="text-base font-semibold text-slate-900">{course.name}</h3>
+          <p className="text-[11px] font-bold uppercase tracking-wide text-lms-accent">{course.courseCode}</p>
+          <h3 className="font-serif text-lg font-semibold text-lms-navy">{course.name}</h3>
           <p className="text-sm text-slate-600">{course.semester}</p>
           <div className="mt-3 grid grid-cols-2 gap-3 text-sm">
             <div>
@@ -34,24 +32,24 @@ export default function CourseCard({
             </div>
           </div>
         </div>
-        <div className="mt-4 flex flex-wrap gap-2 border-t border-slate-100 pt-4">
+        <div className="mt-4 flex flex-wrap gap-2 border-t border-lms-border pt-4">
           <button
             type="button"
-            className="rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-xs font-medium text-slate-700 hover:bg-slate-50"
+            className="rounded-lg border border-lms-border bg-white px-3 py-1.5 text-xs font-semibold text-lms-navy hover:bg-lms-canvas"
           >
             Edit
           </button>
           <button
             type="button"
-            className="rounded-lg border border-rose-200 bg-rose-50 px-3 py-1.5 text-xs font-medium text-rose-700 hover:bg-rose-100"
+            className="rounded-lg border border-rose-200 bg-rose-50 px-3 py-1.5 text-xs font-semibold text-rose-700 hover:bg-rose-100"
           >
             Delete
           </button>
           <Link
             to={detailLink}
-            className="rounded-lg bg-slate-900 px-3 py-1.5 text-xs font-medium text-white hover:bg-slate-800"
+            className="rounded-lg bg-lms-navy px-3 py-1.5 text-xs font-semibold text-white hover:bg-lms-navy-light"
           >
-            View Details
+            Open course
           </Link>
         </div>
       </div>
@@ -59,32 +57,32 @@ export default function CourseCard({
   }
 
   return (
-    <div className="flex flex-col rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
+    <div className="lms-panel flex flex-col p-5 transition hover:shadow-md">
       <div className="flex items-start justify-between gap-2">
         <div>
-          <h3 className="text-base font-semibold text-slate-900">{course.name}</h3>
+          <h3 className="font-serif text-lg font-semibold text-lms-navy">{course.name}</h3>
           <p className="text-sm text-slate-600">{teacherName}</p>
-          <p className="mt-1 text-xs text-slate-500">{course.courseCode}</p>
+          <p className="mt-1 text-xs font-medium text-slate-500">{course.courseCode}</p>
         </div>
         {grade && (
-          <span className="shrink-0 rounded-full bg-slate-100 px-2.5 py-1 text-xs font-semibold text-slate-800">
+          <span className="shrink-0 rounded-full bg-teal-50 px-2.5 py-1 text-xs font-bold text-lms-accent">
             {grade}
           </span>
         )}
       </div>
       <div className="mt-4 space-y-3">
-        <ProgressBar label="Course progress" value={courseProgress} colorClass="bg-slate-800" />
+        <ProgressBar label="Course progress" value={courseProgress} colorClass="bg-lms-navy" />
         <ProgressBar
           label="Attendance rate"
           value={attendancePct}
-          colorClass="bg-emerald-600"
+          colorClass="bg-lms-accent"
         />
       </div>
       <Link
         to={detailLink}
-        className="mt-4 inline-flex w-full items-center justify-center rounded-lg border border-slate-200 bg-white py-2 text-sm font-medium text-slate-800 hover:bg-slate-50"
+        className="mt-4 inline-flex w-full items-center justify-center rounded-lg bg-lms-accent py-2.5 text-sm font-semibold text-white hover:bg-lms-accent-hover"
       >
-        View Course Details
+        Enter course
       </Link>
     </div>
   );

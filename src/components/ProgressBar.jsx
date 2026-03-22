@@ -13,7 +13,7 @@ export default function ProgressBar({
           <span className="font-medium tabular-nums text-slate-800">{pct}%</span>
         </div>
       )}
-      <div className="h-2 w-full overflow-hidden rounded-full bg-slate-100">
+      <div className="h-2 w-full overflow-hidden rounded-full bg-lms-border/80">
         <div
           className={`h-full rounded-full transition-all ${colorClass}`}
           style={{ width: `${pct}%` }}

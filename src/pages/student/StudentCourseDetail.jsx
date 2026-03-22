@@ -47,7 +47,11 @@ export default function StudentCourseDetail() {
     <DashboardLayout
       role="student"
       title={course.name}
-      subtitle={`${course.courseCode} · ${course.semester}`}
+      subtitle={`${course.courseCode} · ${course.semester} · Course workspace (LMS prototype)`}
+      breadcrumbs={[
+        { label: "Home", to: "/student/dashboard" },
+        { label: course.courseCode },
+      ]}
     >
       <div className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm sm:p-6">
         <dl className="grid gap-4 sm:grid-cols-2">

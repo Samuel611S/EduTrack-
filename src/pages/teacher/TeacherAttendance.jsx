@@ -7,8 +7,12 @@ export default function TeacherAttendance() {
   return (
     <DashboardLayout
       role="teacher"
-      title="Attendance"
-      subtitle="Mark, edit, and review student attendance"
+      title="Attendance workspace"
+      subtitle="GPS logs, manual marks, and edits — one row per student per lecture"
+      breadcrumbs={[
+        { label: "Teaching", to: "/teacher/dashboard" },
+        { label: "Attendance" },
+      ]}
     >
       <TeacherAttendancePanel teacherId={DEMO_TEACHER_ID} />
     </DashboardLayout>

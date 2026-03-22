@@ -27,82 +27,127 @@ export default function Login() {
   }
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-gradient-to-b from-slate-100 to-slate-50 px-4 py-12">
-      <div className="w-full max-w-md">
-        <div className="rounded-2xl border border-slate-200 bg-white p-8 shadow-lg shadow-slate-200/60">
-          <div className="text-center">
-            <p className="text-xs font-semibold uppercase tracking-widest text-slate-500">
-              University attendance
-            </p>
-            <h1 className="mt-2 text-3xl font-bold tracking-tight text-slate-900">
-              EduTrack+
-            </h1>
-            <p className="mt-2 text-sm text-slate-600">
-              Sign in to access your dashboard
+    <div className="flex min-h-screen flex-col bg-lms-canvas lg:flex-row">
+      <div className="flex flex-1 flex-col justify-center bg-lms-navy px-4 py-12 text-white sm:px-8 lg:max-w-[52%] lg:px-12">
+        <div className="mx-auto max-w-lg">
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-teal-300/90">
+            Chapter 4 · Wireframe prototype
+          </p>
+          <h1 className="mt-3 font-serif text-4xl font-bold leading-tight tracking-tight sm:text-5xl">
+            EduTrack+
+          </h1>
+          <p className="mt-2 text-lg text-slate-300">
+            Learning Management System with GPS-verified attendance
+          </p>
+          <p className="mt-6 text-sm leading-relaxed text-slate-400">
+            This build implements the wireframe flows as a clickable LMS: course shells, role-based
+            navigation (Admin / Instructor / Student), and location-based attendance during scheduled
+            lecture windows.
+          </p>
+          <ol className="mt-8 space-y-4 border-l border-white/20 pl-5">
+            <li className="text-sm text-slate-200">
+              <span className="font-semibold text-teal-300">1.</span> Enroll in courses and open
+              materials
+            </li>
+            <li className="text-sm text-slate-200">
+              <span className="font-semibold text-teal-300">2.</span> During a live lecture window,
+              tap <strong className="text-white">Mark Attendance</strong> — the browser requests
+              GPS
+            </li>
+            <li className="text-sm text-slate-200">
+              <span className="font-semibold text-teal-300">3.</span> Check-in succeeds only inside
+              the geofence radius defined for that session
+            </li>
+          </ol>
+          <div className="mt-10 rounded-xl border border-white/10 bg-white/5 p-4 text-xs text-slate-400">
+            <p className="font-semibold text-slate-300">Demo mode</p>
+            <p className="mt-1">
+              Use the role buttons to explore each persona. Data is mocked in JSON with local
+              persistence for attendance actions.
             </p>
           </div>
+        </div>
+      </div>
 
-          <form onSubmit={handleSubmit} className="mt-8 space-y-4">
-            <div>
-              <label htmlFor="email" className="block text-xs font-medium text-slate-700">
-                Email
-              </label>
-              <input
-                id="email"
-                type="email"
-                autoComplete="username"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                className="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm outline-none ring-slate-900/10 focus:border-slate-400 focus:bg-white focus:ring-2"
-                placeholder="you@university.edu"
-              />
+      <div className="flex flex-1 items-center justify-center px-4 py-12 sm:px-8">
+        <div className="w-full max-w-md">
+          <div className="lms-panel p-8 shadow-lg shadow-lms-navy/5">
+            <div className="text-center">
+              <p className="text-[11px] font-bold uppercase tracking-wider text-lms-accent">
+                Sign in to the LMS
+              </p>
+              <h2 className="mt-2 font-serif text-2xl font-semibold text-lms-navy">
+                Welcome back
+              </h2>
+              <p className="mt-1 text-sm text-slate-600">
+                Use your university email and password (demo)
+              </p>
             </div>
-            <div>
-              <label htmlFor="password" className="block text-xs font-medium text-slate-700">
-                Password
-              </label>
-              <input
-                id="password"
-                type="password"
-                autoComplete="current-password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                className="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm outline-none ring-slate-900/10 focus:border-slate-400 focus:bg-white focus:ring-2"
-                placeholder="••••••••"
-              />
-            </div>
-            <button
-              type="submit"
-              className="w-full rounded-lg bg-slate-900 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-slate-800"
-            >
-              Log in
-            </button>
-          </form>
 
-          <div className="mt-8 border-t border-slate-100 pt-6">
-            <p className="text-center text-xs font-medium text-slate-500">Demo access</p>
-            <div className="mt-3 grid gap-2 sm:grid-cols-3">
+            <form onSubmit={handleSubmit} className="mt-8 space-y-4">
+              <div>
+                <label htmlFor="email" className="block text-xs font-semibold text-lms-navy">
+                  Email
+                </label>
+                <input
+                  id="email"
+                  type="email"
+                  autoComplete="username"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  className="mt-1 w-full rounded-lg border border-lms-border bg-white px-3 py-2.5 text-sm outline-none ring-lms-accent/20 focus:border-lms-accent focus:ring-2"
+                  placeholder="you@university.edu"
+                />
+              </div>
+              <div>
+                <label htmlFor="password" className="block text-xs font-semibold text-lms-navy">
+                  Password
+                </label>
+                <input
+                  id="password"
+                  type="password"
+                  autoComplete="current-password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  className="mt-1 w-full rounded-lg border border-lms-border bg-white px-3 py-2.5 text-sm outline-none ring-lms-accent/20 focus:border-lms-accent focus:ring-2"
+                  placeholder="••••••••"
+                />
+              </div>
               <button
-                type="button"
-                onClick={() => go("admin")}
-                className="rounded-lg border border-slate-200 bg-white py-2 text-xs font-semibold text-slate-800 shadow-sm hover:bg-slate-50"
+                type="submit"
+                className="w-full rounded-lg bg-lms-accent py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-lms-accent-hover"
               >
-                Login as Admin
+                Log in
               </button>
-              <button
-                type="button"
-                onClick={() => go("teacher")}
-                className="rounded-lg border border-slate-200 bg-white py-2 text-xs font-semibold text-slate-800 shadow-sm hover:bg-slate-50"
-              >
-                Login as Teacher
-              </button>
-              <button
-                type="button"
-                onClick={() => go("student")}
-                className="rounded-lg border border-slate-200 bg-white py-2 text-xs font-semibold text-slate-800 shadow-sm hover:bg-slate-50 sm:col-span-1"
-              >
-                Login as Student
-              </button>
+            </form>
+
+            <div className="mt-8 border-t border-lms-border pt-6">
+              <p className="text-center text-[11px] font-bold uppercase tracking-wider text-slate-500">
+                Jump to persona (prototype)
+              </p>
+              <div className="mt-3 grid gap-2 sm:grid-cols-3">
+                <button
+                  type="button"
+                  onClick={() => go("admin")}
+                  className="rounded-lg border border-lms-border bg-lms-paper py-2.5 text-xs font-semibold text-lms-navy shadow-sm hover:bg-lms-canvas"
+                >
+                  Admin
+                </button>
+                <button
+                  type="button"
+                  onClick={() => go("teacher")}
+                  className="rounded-lg border border-lms-border bg-lms-paper py-2.5 text-xs font-semibold text-lms-navy shadow-sm hover:bg-lms-canvas"
+                >
+                  Instructor
+                </button>
+                <button
+                  type="button"
+                  onClick={() => go("student")}
+                  className="rounded-lg border border-lms-border bg-lms-paper py-2.5 text-xs font-semibold text-lms-navy shadow-sm hover:bg-lms-canvas"
+                >
+                  Student
+                </button>
+              </div>
             </div>
           </div>
         </div>

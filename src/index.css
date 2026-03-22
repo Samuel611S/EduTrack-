@@ -1,5 +1,29 @@
 @import "tailwindcss";
 
+/* LMS prototype theme — Chapter 4 wireframe implementation */
+@theme {
+  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Literata", "Iowan Old Style", Georgia, serif;
+
+  --color-lms-navy: #0c2340;
+  --color-lms-navy-light: #153a5c;
+  --color-lms-canvas: #f2efe9;
+  --color-lms-paper: #faf8f5;
+  --color-lms-accent: #0f766e;
+  --color-lms-accent-hover: #0d9488;
+  --color-lms-warn: #b45309;
+  --color-lms-border: #e2dcd3;
+}
+
 body {
-  @apply bg-slate-50 text-slate-900 antialiased;
+  @apply bg-lms-canvas font-sans text-slate-900 antialiased;
+}
+
+/* Card surface used across LMS panels */
+.lms-panel {
+  @apply rounded-xl border border-lms-border bg-lms-paper shadow-sm;
+}
+
+.lms-panel-header {
+  @apply border-b border-lms-border bg-white/80 px-4 py-3 sm:px-5;
 }
